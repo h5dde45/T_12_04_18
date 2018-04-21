@@ -21,7 +21,7 @@ public class Main {
 
         byte[] data = bos.toByteArray();
         System.out.println(Arrays.toString(data));
-        System.out.println(new String(data));
+        System.out.println(new String(data, "utf-8"));
 
     }
 }
