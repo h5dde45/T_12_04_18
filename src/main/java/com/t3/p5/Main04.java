@@ -1,6 +1,6 @@
 package com.t3.p5;
 
-public class Main03 {
+public class Main04 {
     static volatile boolean in = false;
 
     public static void main(String[] args) {
@@ -9,9 +9,7 @@ public class Main03 {
             synchronized (monitor) {
                 in = true;
                 try {
-                    System.out.println("x");
-                    monitor.wait();
-                    System.out.println("y");
+                    Thread.sleep(Long.MAX_VALUE);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -23,8 +21,6 @@ public class Main03 {
         System.out.println("b");
         synchronized (monitor) {
             System.out.println("c");
-            monitor.notify();
-            System.out.println("d");
         }
     }
 }
