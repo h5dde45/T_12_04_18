@@ -3,7 +3,7 @@ package com.t3.p6;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-public class App01 {
+public class App02 {
     public static void main(String[] args) {
         BlockingQueue<Integer> queue = new ArrayBlockingQueue<>(16);
 
@@ -12,7 +12,7 @@ public class App01 {
             int counter = 0;
             while (true) {
                 try {
-                    Thread.sleep(1555);
+                    Thread.sleep(554);
                     queue.put(++counter);
                     System.out.println("put: " + counter);
                 } catch (InterruptedException ignore) {
@@ -22,10 +22,10 @@ public class App01 {
 
         //consumer
         new Thread(() -> {
-            while (true) {
+            for (int i = 0; i < 3; i++) {
                 try {
                     System.out.println("wait for take....");
-                  int  data = queue.take();
+                    int data = queue.take();
                     System.out.println("take: " + data);
                 } catch (InterruptedException ignore) {
                 }
