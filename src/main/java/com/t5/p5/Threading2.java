@@ -5,7 +5,7 @@ import java.util.List;
 
 import static java.util.Collections.max;
 
-public class threading {
+public class Threading2 {
     public static void main(String[] args) throws InterruptedException {
         List<Integer> list = Arrays.asList(1, 4, 6, 4, 5, 3, 8, 6, 4, 7);
         List<String> list2 = Arrays.asList("2ee4ее3", "ergheedr", "hye4е5re6");
