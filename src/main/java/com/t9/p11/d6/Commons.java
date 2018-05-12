@@ -21,7 +21,7 @@ public class Commons {
         return sum;
     }
 
-    private static double function(int i) {
+     static double function(int i) {
         return Math.sin(i);
     }
 }
